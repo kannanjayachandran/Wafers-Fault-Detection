@@ -7,7 +7,7 @@
 
 ## About
 
-An end-to-end machine learning project for detecting faults in wafers.
+An end-to-end machine learning project for detecting faults in wafer sensor.
 
 **Wafer** is a thin slice of semiconductor material, typically silicon, used in the production of integrated
 circuits [more↗](https://en.wikipedia.org/wiki/Wafer_(electronics)#:~:text=In%20electronics%2C%20a%20wafer%20(also,in%20and%20upon%20the%20wafer.)). Sensors in wafer can get damaged which may lead to faulty wafers, depending on the cruciality of the sensor damaged the wafer may need rework process.
