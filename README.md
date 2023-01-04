@@ -65,3 +65,5 @@ Architecture of the solution:
 **[ToDo](./ToDo.md)**
 
 **[Contributions](./CONTRIBUTING.md)**
+
+**[References](./Reference.md)**
