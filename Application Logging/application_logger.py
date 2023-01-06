@@ -1,11 +1,12 @@
 from datetime import datetime
 
 class App_log:
-
     def __init__(self):
-        pass
+        self.date = None
+        self.now = None
+        self.current_time = None
 
-    def logger(self, file_obj, log_message):
+    def app_logger(self, file_obj, log_message):
 
         self.now = datetime.now()
         self.date = datetime.date()
