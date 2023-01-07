@@ -67,3 +67,5 @@ Architecture of the solution:
 **[Contributions](./CONTRIBUTING.md)**
 
 **[References](./Reference.md)**
+
+**[License](./LICENSE)**
