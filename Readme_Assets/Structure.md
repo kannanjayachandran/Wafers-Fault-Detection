@@ -13,3 +13,4 @@ The data is obtained as batches to a fixed location. The data contains the Wafer
 The data is ingested from the fixed location and stored in a database.
 
 1. Created a database schema for the data (prediction schema).
+2. Created a folder called `Prediction_Logs` to store the logs of the ingestion process.
