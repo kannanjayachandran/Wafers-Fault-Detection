@@ -3,7 +3,7 @@ import io
 import unittest
 from datetime import datetime
 
-from application_logger import App_log
+from application_logger import AppLog
 
 
 class TestAppLogger(unittest.TestCase):
@@ -12,7 +12,7 @@ class TestAppLogger(unittest.TestCase):
         fake_file = io.StringIO()
 
         # Create an instance of the App_Logger class
-        logger = App_log.app_logger()
+        logger = AppLog.app_logger()
 
         # Log a message
         logger.log(fake_file, "This is a log message")
