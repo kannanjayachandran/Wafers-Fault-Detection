@@ -62,10 +62,12 @@ Architecture of the solution:
 <img src="./Readme_Assets/Arch.png" width="600" height="600">
 </div>
 
-**[Main ToDo](./ToDo.md)**
+**[Main ToDo](./Readme_Assets/ToDo.md)**
+
+**[Project Structure](./Readme_Assets/Structure.md)**
 
 **[Contributions](./CONTRIBUTING.md)**
 
-**[References](./Reference.md)**
+**[References](./Readme_Assets/Reference.md)**
 
 **[License](./LICENSE)**
