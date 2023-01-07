@@ -2,6 +2,8 @@
 
 Application logging is a critical part of any application. It allows you to track the flow of your application and debug issues when they arise.
 
+**Here I am using a custom logging function to log the messages.**
+
 - The class `App_Logger` has a single method called `log`. The `log` method takes two arguments: a `file_object` and a `log_message`.
 
 - The `log` method first gets the current date and time using the `datetime` module. It then formats the date and time as strings and writes them to the file_object along with the log_message, separated by tabs.
