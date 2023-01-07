@@ -62,7 +62,7 @@ Architecture of the solution:
 <img src="./Readme_Assets/Arch.png" width="600" height="600">
 </div>
 
-**[ToDo](./ToDo.md)**
+**[Main ToDo](./ToDo.md)**
 
 **[Contributions](./CONTRIBUTING.md)**
 
