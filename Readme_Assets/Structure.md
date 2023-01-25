@@ -1,16 +1,57 @@
-# Project Structure
+<div align="center">
 
-## 1. Application Logger
+# Wafer Fault Detection
 
-Created a Custom Application Logger to log each and every step of the application running process.
+## _CODING DOCUMENTATION_
 
-## 2. Aquired Data
+</div>
 
-The data is obtained as batches to a fixed location. The data contains the Wafer names and 590 columns of different sensor values for each wafer. The last column will have the "Good/Bad" value for each wafer.
+> This section contains the step by step process through which I have created this project. It would describe the folder structure, classes inside each folders, and functions inside each classes.  
 
-## 3. Data Ingestion
+## Overview
 
-The data is ingested from the fixed location and stored in a database.
+**The overall solution is divided into 8 parts:**
 
-1. Created a database schema for the data (prediction schema).
-2. Created a folder called `Prediction_Logs` to store the logs of the ingestion process.
+* Data ingestion
+* Data Preprocessing
+* Model Selection
+* Model Building and Tuning
+* Prediction and Model Evaluation
+* Logging Framework
+* Model Deployment
+* Model Monitoring
+* Model Retraining
+* CI/CD
+
+---
+
+## Application Logger
+
+>First we need to Create a Custom Application Logger to log each and every step of the application running process. The inbuilt logging module of python is avoided simply because it not thread safe. This is prerequisite for the project
+
+1. A folder is created with the name `Application_Logging`.
+2. Create a file called `application_logger.py` in the `Application_Logging` folder, which contains the `AppLog` class.
+3. The `AppLog` class contains the `app_logger method` which is used to create a logger object.
+
+## Data Ingestion
+
+>This is the first step of the project. From here our data pipeline starts. The data is ingested from the fixed location and stored in a database.
+
+1. Create a database schema for training the data [Training Schema](../Training_Schema.json)
+
+``` py
+ Database schema is the structure of the database; more like a blueprint of the database. It defines the tables, columns, and relationships between the tables. It also defines the data types of the columns.
+
+```
+
+2. Create a folder called `Prediction_Raw_Data_Validation` in the root directory.
+3. Create a file called `DataValidationPrediction` in the `Prediction_Raw_Data_Validation` folder, which contains the `DataValidationPrediction` class.
+4. The `DataValidationPrediction` class contains the following functions;
+
+``` python
+
+valuesFromSchema() # This function is used to extract values from the schema file.
+RegexCreator() # This function is used to create a regex pattern for the validation of the data.
+
+
+```
