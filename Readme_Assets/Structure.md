@@ -39,10 +39,7 @@
 
 1. Create a database schema for training the data [Training Schema](../Training_Schema.json)
 
-``` py
- Database schema is the structure of the database; more like a blueprint of the database. It defines the tables, columns, and relationships between the tables. It also defines the data types of the columns.
-
-```
+> Database schema is the structure of the database; more like a blueprint of the database. It defines the tables, columns, and relationships between the tables. It also defines the data types of the columns.
 
 2. Create a folder called `Prediction_Raw_Data_Validation` in the root directory.
 3. Create a file called `DataValidationPrediction` in the `Prediction_Raw_Data_Validation` folder, which contains the `DataValidationPrediction` class.
