@@ -8,8 +8,15 @@ class AppLog:
         self.current_time = None
 
     def app_logger(self, file_obj, log_message):
+        """
+        Method Name: app_logger
+
+        :param file_obj:
+        :param log_message:
+        :return:
+        """
         self.now = datetime.now()
-        self.date = datetime.date()
+        self.date = self.now.date()
         self.current_time = self.now.strftime("%H:%M:%S")
 
         file_obj.write(
