@@ -1,0 +1,1 @@
+This folder contains training csv files extracted from database

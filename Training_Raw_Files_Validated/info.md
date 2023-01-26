@@ -1,0 +1,1 @@
+This folder contains the raw validated csv files
