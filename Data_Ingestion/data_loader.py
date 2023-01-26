@@ -28,5 +28,5 @@ class DataGetter:
             self.logger_object.log(self.file_object,
                                    'Exception occurred in get_data method. Exception message: ' + str(e))
             self.logger_object.log(self.file_object,
-                                   'Data Load failed.Exited the get_data method')
+                                   'Data Loading failed.Exited the get_data method')
             raise Exception()
