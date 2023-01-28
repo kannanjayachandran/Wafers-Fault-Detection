@@ -26,7 +26,6 @@ class Preprocessor:
 
         try:
             self.useful_data = self.data.drop(labels=self.cols, axis=1)
-            # It would drop the label specified in the column
             self.logger_object.log(self.file_object, 'Successfully removed column. Exited remove_cols method')
             return self.useful_data
         except Exception as e:
