@@ -49,6 +49,8 @@
 
 **Detailed explanation of the complete project is given in the [Project Structure](./Readme_Assets/Structure.md) It contains the documentation of the project.**
 
+>Inside each folder, there is a readme file which contains the documentation of the folder. It would contain information like what is the purpose of the folder, what are the files inside the folder, what are the functions present in the files, etc.
+
 **[Main ToDo](./Readme_Assets/ToDo.md)**
 
 **[Contributions](./CONTRIBUTING.md)**
