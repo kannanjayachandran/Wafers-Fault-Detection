@@ -14,7 +14,7 @@ class DataGetter:
     def get_data(self):
         """
         Method Name: get_data
-        Description: This methods reads data form the source
+        Description: This method reads data form the source
         Output: Pandas Dataframe
         """
         self.logger_object.log(self.file_object, 'Inside the get_data method of the DataGetter class')
