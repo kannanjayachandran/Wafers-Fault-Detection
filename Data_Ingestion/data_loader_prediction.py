@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 class DataGetterPrediction:
     """
     This class would be used to get data for prediction
@@ -19,8 +20,7 @@ class DataGetterPrediction:
 
         except Exception as e:
             self.logger_object.log(self.file_object, 'Exception occurred in get_data_prediction method.',
-                                   ' Exception message: '+str(e))
+                                   ' Exception message: ' + str(e))
             self.logger_object.log(self.file_object,
                                    'Data Loading failed.Exited the get_data_prediction method ')
             raise Exception()
-
