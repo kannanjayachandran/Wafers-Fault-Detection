@@ -4,7 +4,7 @@
 
 </div>
 
->Application logging is a critical part of any application. It allows you to track the flow of your application and debug issues when they arise. **Here I am using a custom logging function to log the messages.**
+### Application logging is a critical part of any application. It allows you to track the flow of your application and debug issues when they arise. **Here I am using a custom logging function to log the messages.**
 
 - The class `App_Logger` has a single method called `log`. The `log` method takes two arguments: a `file_object` and a `log_message`.
 
