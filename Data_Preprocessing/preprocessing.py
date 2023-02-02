@@ -19,6 +19,9 @@ class Preprocessor:
         Output : Dataframe after removing specified columns
         :param data:
         :param cols:
+        :return: pandas dataframe
+        :param data:
+        :param cols:
         """
         self.logger_object.log(self.file_object, 'Entered the remove_cols method of Preprocessor class')
         self.data = data
@@ -28,9 +31,10 @@ class Preprocessor:
             self.useful_data = self.data.drop(labels=self.cols, axis=1)
             self.logger_object.log(self.file_object, 'Successfully removed column. Exited remove_cols method')
             return self.useful_data
+
         except Exception as e:
             self.logger_object.log(self.file_object, 'Exception occurred in remove_cols method of Preprocessor class'
-                                                     'Exception message:  ' + str(e))
+                                                     f'Exception message: {e}')
             self.logger_object.log(self.file_object, 'Column removal failed. Exited remove_col method')
 
             raise Exception()
@@ -42,7 +46,7 @@ class Preprocessor:
         Output : Two dataframes one containing features, one containing labels
         :param data:
         :param label_col_name:
-        :return:
+        :return: pandas dataframe
         """
 
         self.logger_object.log(self.file_object, 'Entered separate_label_feature method of Preprocessor class')
@@ -50,12 +54,14 @@ class Preprocessor:
         try:
             self.X = data.drop(labels=label_col_name, axis=1)
             self.Y = data[label_col_name]  # filtering the label columns
-            self.logger_object.log(self.file_object, 'Successfully separated labels.' ''
+
+            self.logger_object.log(self.file_object, 'Successfully separated labels.'
                                                      'Exited separate_label_feature method')
             return self.X, self.Y
+
         except Exception as e:
-            self.logger_object.log(self.file_object, 'Exception occurred in separate_label_feature' ''
-                                                     'method of Preprocessor class. Exception message: ' + str(e))
+            self.logger_object.log(self.file_object, 'Exception occurred in separate_label_feature' 
+                                                     f'method of Preprocessor class. Exception message: {e}')
             self.logger_object.log(self.file_object, 'Label separation unsuccessful.'
                                                      'Exited separate_label_feature method')
             raise Exception()
@@ -66,7 +72,7 @@ class Preprocessor:
         Description: This method checks if there is null values in the dataframe
         Output: Returns a Boolean Value.
         :param data:
-        :return:
+        :return: Boolean
         """
 
         self.logger_object.log(self.file_object, 'Entered the is_null_present method of the Preprocessor class')
@@ -93,7 +99,7 @@ class Preprocessor:
 
         except Exception as e:
             self.logger_object.log(self.file_object, 'Exception occurred in is_null_present method of the Preprocessor '
-                                                     'class. Exception message: ' + str(e))
+                                                     f'class. Exception message: {e}')
             self.logger_object.log(self.file_object, 'Finding missing values failed. Exited the is_null_present '
                                                      'method of the Preprocessor class')
             raise Exception()
@@ -120,10 +126,10 @@ class Preprocessor:
             return self.new_data
 
         except Exception as e:
-            self.logger_object.log(self.file_object, 'Exception occurred in impute_missing_values method of the'
-                                                    ' Preprocessor class. Exception message:  ' + str(e))
+            self.logger_object.log(self.file_object, 'Exception occurred in impute_missing_values method of the '
+                                                     f'Preprocessor class. Exception message:  {e}')
             self.logger_object.log(self.file_object, 'Imputing missing values failed. Exited the impute_missing_values '
-                                                    'method of the Preprocessor class')
+                                                     'method of the Preprocessor class')
             raise Exception()
 
     def get_columns_with_zero_std_deviation(self, data):
@@ -132,7 +138,7 @@ class Preprocessor:
         Description: This method finds out the columns which have a standard deviation of zero.
         Output: List of the columns with standard deviation of zero
         :param data:
-        :return:
+        :return: list
         """
         self.logger_object.log(self.file_object, 'Entered the get_columns_with_zero_std_deviation method '
                                                  'of the Preprocessor class')
@@ -150,7 +156,7 @@ class Preprocessor:
 
         except Exception as e:
             self.logger_object.log(self.file_object,'Exception occurred in get_columns_with_zero_std_deviation method '
-                                                    'of the Preprocessor class. Exception message:  ' + str(e))
+                                                    'of the Preprocessor class. Exception message:  {e}')
             self.logger_object.log(self.file_object, 'Column search for Standard Deviation of Zero Failed. Exited '
                                                      'the get_columns_with_zero_std_deviation method of the '
                                                      'Preprocessor class')

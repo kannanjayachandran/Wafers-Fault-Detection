@@ -16,17 +16,20 @@ class DataGetter:
         Method Name: get_data
         Description: This method reads data form the source
         Output: Pandas Dataframe
+        :return: self.data
+        :rtype: pandas.DataFrame
+        :param self:
         """
         self.logger_object.log(self.file_object, 'Inside the get_data method of the DataGetter class')
 
         try:
             self.data = pd.read_csv(self.training_file)
-            self.logger_object.log(self.file_object, 'Data successfully loaded. Exited the get_data method',)
+            self.logger_object.log(self.file_object, 'Data successfully loaded. Exited the get_data method')
 
             return self.data
         except Exception as e:
             self.logger_object.log(self.file_object,
-                                   'Exception occurred in get_data method. Exception message: ' + str(e))
+                                   f'Exception occurred in get_data method. Exception message: {e}')
             self.logger_object.log(self.file_object,
                                    'Data Loading failed.Exited the get_data method')
             raise Exception()
