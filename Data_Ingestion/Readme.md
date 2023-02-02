@@ -13,10 +13,10 @@
 
 > This file contains the class and methods used to get data from the source for training. The class is called DataGetter and it contains the following method:
 
-- get_data(self) - This method is used to get the data from the source and load it into a pandas dataframe.
+- `get_data(self)` - This method is used to get the data from the source and load it into a pandas dataframe.
 
 ### data_loader_prediction.py
 
 > This file contains the class and methods used to get data from the source for prediction. The class is called DataGetterPrediction and it contains the following method:
 
-- get_data_prediction(self) - This method is used to get the data from the source and load it into a pandas dataframe.
+- `get_data_prediction(self)` - This method is used to get the data from the source and load it into a pandas dataframe.
