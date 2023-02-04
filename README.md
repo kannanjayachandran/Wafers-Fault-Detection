@@ -44,7 +44,7 @@
 ## Architecture of the solution
 
 <div align="center">
-<img src="./Readme_Assets/Arch.png" width="600" height="600">
+<img src="./Readme_Assets/Arch.png" width="700" height="600">
 </div>
 
 **Detailed explanation of the complete project is given in the [Project Structure](./Readme_Assets/Structure.md) It contains the documentation of the project.**
