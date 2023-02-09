@@ -161,7 +161,7 @@ class PredictionDataValidation:
                 os.makedirs(path)
 
             source = 'Prediction_Raw_Files_Validated/Bad_Raw/'
-            destination = 'PredictionArchivedBadData/BadData_' + str(date) + "_"+str(time)
+            destination = 'PredictionArchivedBadData/BadData_' + str(date) + "_" + str(time)
 
             if not os.path.isdir(destination):
                 os.makedirs(destination)
@@ -171,7 +171,7 @@ class PredictionDataValidation:
                 if f not in os.listdir(destination):
                     shutil.move(source + f, destination)
             file = open("Prediction_Logs/GeneralLog.txt", 'a+')
-            self.logger.app_logger(file,"Bad files moved to archive")
+            self.logger.app_logger(file, "Bad files moved to archive")
             path = 'Prediction_Raw_Files_Validated/'
 
             if os.path.isdir(path + 'Bad_Raw/'):
@@ -184,9 +184,6 @@ class PredictionDataValidation:
             self.logger.app_logger(file, f'Error while moving bad files to archive:: {e}')
             file.close()
             raise OSError
-
-
-
 
     def validation_file_name_raw(self, regex, LengthOfDateStampInFile, LengthOfTimeStampInFile):
         """
@@ -236,12 +233,11 @@ class PredictionDataValidation:
             f.close()
             raise e
 
-
     def validate_col_len(self, NumberofColumns):
         """
             Method Name: validate_col_len
             Description: This function validates the number of columns in the csv files.
-                         It is should be same as given in the schema file.
+                         It should be same as given in the schema file.
                          If not same file is not suitable for processing and thus is moved to Bad Raw Data folder.
                          If the column number matches, file is kept in Good Raw Data for processing.
                         The csv file is missing the first column name, this function changes the missing name to "Wafer".
@@ -257,13 +253,15 @@ class PredictionDataValidation:
                     csv.rename(columns={"Unnamed: 0": "Wafer"}, inplace=True)
                     csv.to_csv("Prediction_Raw_Files_Validated/Good_Raw/" + file, index=None, header=True)
                 else:
-                    shutil.move("Prediction_Raw_Files_Validated/Good_Raw/" + file, "Prediction_Raw_Files_Validated/Bad_Raw")
-                    self.logger.app_logger(f, f'Invalid Column Length for the file!! File moved to Bad Raw Folder :: {file}')
+                    shutil.move("Prediction_Raw_Files_Validated/Good_Raw/" + file,
+                                "Prediction_Raw_Files_Validated/Bad_Raw")
+                    self.logger.app_logger(f,
+                                           f'Invalid Column Length for the file!! File moved to Bad Raw Folder :: {file}')
 
             self.logger.app_logger(f, "Column Length Validation Completed!!")
         except OSError as e:
             f = open("Prediction_Logs/columnValidationLog.txt", 'a+')
-            self.logger.app_logger(f, f'Error Occurred while moving the file :: {e}' )
+            self.logger.app_logger(f, f'Error Occurred while moving the file :: {e}')
             f.close()
             raise OSError
 
@@ -298,8 +296,10 @@ class PredictionDataValidation:
                 for columns in csv:
                     if (len(csv[columns]) - csv[columns].count()) == len(csv[columns]):
                         count += 1
-                        shutil.move("Prediction_Raw_Files_Validated/Good_Raw/" + file,"Prediction_Raw_Files_Validated/Bad_Raw")
-                        self.logger.app_logger(f, f'Invalid Column Length for the file!! File moved to Bad Raw Folder :: {file}')
+                        shutil.move("Prediction_Raw_Files_Validated/Good_Raw/" + file,
+                                    "Prediction_Raw_Files_Validated/Bad_Raw")
+                        self.logger.app_logger(f,
+                                               f'Invalid Column Length for the file!! File moved to Bad Raw Folder :: {file}')
                         break
                 if count == 0:
                     csv.rename(columns={"Unnamed: 0": "Wafer"}, inplace=True)
