@@ -1,26 +1,24 @@
-import datetime
-import io
 import unittest
-from datetime import datetime
-
+import os
 from application_logger import AppLog
 
 
-class TestAppLogger(unittest.TestCase):
-    def test_log(self):
-        # Create a fake file object
-        fake_file = io.StringIO()
+class TestAppLog(unittest.TestCase):
+    def setUp(self):
+        self.log_file = "test.log"
+        self.logger = AppLog()
 
-        # Create an instance of the App_Logger class
-        logger = AppLog.app_logger()
+    def test_app_logger(self):
+        log_message = "Test message"
+        self.logger.app_logger(self.log_file, log_message)
+        with open(self.log_file) as f:
+            lines = f.readlines()
+            self.assertEqual(len(lines), 1)
+            self.assertIn(log_message, lines[0])
 
-        # Log a message
-        logger.log(fake_file, "This is a log message")
+    def tearDown(self):
+        os.remove(self.log_file)
 
-        # Get the current date and time
-        now = datetime.now()
-        date = now.date()
-        current_time = now.strftime("%H:%M:%S")
 
-        # Check that the message was written to the file in the expected format
-        self.assertEqual(fake_file.getvalue(), f"{date}/{current_time}\t\tThis is a log message\n")
+if __name__ == '__main__':
+    unittest.main()
