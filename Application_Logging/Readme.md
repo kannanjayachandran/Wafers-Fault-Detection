@@ -1,27 +1,18 @@
 <div align="center">
 
-# Application Logging
+### Application Logging
 
 </div>
 
-### Application logging is a critical part of any application. It allows you to track the flow of your application and debug issues when they arise. **Here I am using a custom logging function to log the messages.**
+Application logging is a critical part of any application. It allows you to track the flow of your application and debug issues when they arise. **Here I am using a custom logging function to log the messages. Python has a built-in logging module; that could also be used**.
 
-- The class `App_Logger` has a single method called `log`. The `log` method takes two arguments: a `file_object` and a `log_message`.
+- The class `AppLog` has a single method called `app_logger`. The `app_logger` method takes two arguments: a `file_obj` and a `log_message`.
 
-- The `log` method first gets the current date and time using the `datetime` module. It then formats the date and time as strings and writes them to the file_object along with the log_message, separated by tabs.
+- The `app_logger` method first gets the current date and time using the `datetime` module. It then formats the date and time as strings and writes them to the file_object along with the log_message, separated by tabs.
 
 > The file_object is expected to be a file-like object that supports the write method, such as a file opened in write mode. The log_message is a string containing the message that you want to log.
 
-For example, if you have a file object `f` and you want to log the message "This is a log message", you could do something like this:
-
-```python
-logger = app_Logger()
-logger.log(f, "This is a log message")
-```
-
-This would write a line to the file in the following format: ``date/time log message``.
-
-> The [test file](./test_app_logger.py) file contains a test for the `App_Logger` class. Apparently, there is no need of this test file nor this test file is required to run this application. I have wrote this test file just to show how to write a test.
+> The [test file](./test_app_logger.py) file contains a simple test for the `App_Logger` class. Apparently, there is no need of this test file nor this test file is required to run this application. I have wrote this test file just to show how to write a test and it is always a good practice to write a test for your code.
 
 **We can run the test file using the following command:**
 
@@ -29,5 +20,3 @@ This would write a line to the file in the following format: ``date/time log mes
 
 python -m unittest test_app_logger.py
 ```
-
-**Use this logger in asynchronous manner (async io)**
