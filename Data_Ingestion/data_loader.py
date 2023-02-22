@@ -14,9 +14,7 @@ class DataGetter:
 
     def get_data(self):
         """
-        Method Name: get_data
-        Description: This method reads data form the source
-        Output: Pandas Dataframe
+        This method is used to get data from a source for training and prediction
         :return: data
         :rtype: pandas.DataFrame
         """
