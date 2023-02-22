@@ -5,9 +5,7 @@ class AppLog:
     @staticmethod
     def app_logger(file_obj, log_message):
         """
-        Method Name: app_logger
-        Description: Logs the message into the log file.
-
+        This method logs the messages to the log file.
         :param file_obj:
         :param log_message:
         :return:
