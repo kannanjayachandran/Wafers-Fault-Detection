@@ -5,6 +5,7 @@ from xgboost import XGBClassifier
 from sklearn.model_selection import cross_validate
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
+from typing import Optional, Any, Union
 
 
 class BestModel:
@@ -12,8 +13,8 @@ class BestModel:
     A class to find the best model and hyperparameters, train the model, and evaluate it on test data.
     """
 
-    def __init__(self, x_train, y_train, x_test, y_test, file_object):
-        self.best_pipeline = None
+    def __init__(self, x_train: Any, y_train: Any, x_test: Any, y_test: Any, file_object: Any) -> None:
+        self.best_pipeline: Optional[Union[Pipeline, None]] = None
         self.x_train = x_train
         self.y_train = y_train
         self.x_test = x_test
@@ -21,7 +22,7 @@ class BestModel:
         self.file_object = file_object
         self.logger = AppLog()
 
-    def find_best_pipeline(self):
+    def find_best_pipeline(self) -> Optional[Pipeline]:
         """
         Find the best model and hyperparameters using cross-validation.
         :return: best pipeline
@@ -80,8 +81,9 @@ class BestModel:
         except Exception as e:
             self.logger.app_logger(self.file_object, 'Exception occurred in find_best_pipeline method of the ' +
                                    f'BestModel class. Exception message: {e}')
+            return None
 
-    def train_best_model(self):
+    def train_best_model(self) -> None:
         """
         Train the best model with the best hyperparameters on the entire training set.
         """
@@ -91,7 +93,7 @@ class BestModel:
             self.logger.app_logger(self.file_object, 'Exception occurred in train_best_model method of the ' +
                                    f'BestModel class. Exception message: {e}')
 
-    def evaluate_best_model(self):
+    def evaluate_best_model(self) -> Union[float, None]:
         """
         Evaluate the best model on the test set and return the accuracy score.
         """
@@ -104,7 +106,7 @@ class BestModel:
             self.logger.app_logger(self.file_object, 'Exception occurred in evaluate_best_model method of the ' +
                                    f'BestModel class. Exception message: {e}')
 
-    def save_model(self, model_path):
+    def save_model(self, model_path: str) -> None:
         """
         Save the trained model to a file using joblib.
         """
@@ -115,7 +117,7 @@ class BestModel:
             self.logger.app_logger(self.file_object, 'Exception occurred in save_model method of the ' +
                                    f'BestModel class. Exception message: {e}')
 
-    def load_model(self, model_path):
+    def load_model(self, model_path: str) -> None:
         """
         Load a trained model from a file using joblib.
         """

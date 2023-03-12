@@ -31,4 +31,4 @@ In the `evaluate_best_model()` function we are evaluating the best model using t
 
 In the `save_best_model()` function we are saving the best model using the `joblib` library
 
-Finally in the `load_best_model()` function we are loading the best model using the `joblib` library
+Finally, in the `load_best_model()` function we are loading the best model using the `joblib` library
