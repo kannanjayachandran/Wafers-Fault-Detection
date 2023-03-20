@@ -8,5 +8,4 @@
 - [ ] Retraining the model
 - [ ] CI/CD
 
-- [ ] Rebuilding the model (Neural Net and then Deep Learning Models)
 - [ ] Creating and end to end pipeline
