@@ -1,11 +1,9 @@
 # ToDo
 
-- [ ] Building the model (Classical ML Models)
-- [ ] Evaluating the model
-- [ ] Building the web app
-- [ ] Deploying the model
+- [ ] Complete the MVP and deploy it.
+- [ ] improve the code quality and adhere to the best practices.
+- [ ] Tweaking the model to improve the accuracy.
+- [ ] Build a clean and Functional UI.
 - [ ] Monitoring the model
 - [ ] Retraining the model
-- [ ] CI/CD
-
-- [ ] Creating and end to end pipeline
+- [ ] Implement CI/CD pipelines
