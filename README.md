@@ -51,7 +51,16 @@
 
 >Inside each folder, there is a readme file which contains the documentation of the folder. It would contain information like what is the purpose of the folder, what are the files inside the folder, what are the functions present in the files, etc.
 
-> `The idea of this whole project is to learn some machine learning concepts, building and end-to-end machine product that actually works or is useful to others, and to learn how to deploy a machine learning model on a web application. I would follow the best coding practices and document the project as much as possible.`
+**The output of this whole project is:**
+
+  `1. Learned some basic ML algorithms.`
+  
+  `2. How to design an end-end software product.`
+  
+  `3. Applying CI/CD to ML models or tasks.`
+  
+  `4. Debugging and retraining ML models and how much important it is.`
+
 
 **[Main ToDo](./Readme_Assets/ToDo.md)**
 
