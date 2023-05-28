@@ -5,12 +5,6 @@
 <img src="./Readme_Assets/semi.png" width="200" height="200">
 
 [![GitHub license](./Readme_Assets/license-MIT-green.svg)](./LICENSE)
-[![GitHub contributors](https://img.shields.io/github/contributors/kannanjayachandran/Wafers-Fault-Detection)](https://GitHub.com/kannanjayachandran/Wafers-Fault-Detection/graphs/contributors/)
-[![GitHub issues](https://img.shields.io/github/issues/kannanjayachandran/Wafers-Fault-Detection)]()
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/kannanjayachandran/Wafers-Fault-Detection)]()
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
-[![GitHub watchers](https://img.shields.io/github/watchers/kannanjayachandran/Wafers-Fault-Detection?style=social)](https://GitHub.com/kannanjayachandran/wafers/watchers/)
 [![GitHub forks](https://img.shields.io/github/forks/kannanjayachandran/Wafers-Fault-Detection?style=social)](https://GitHub.com/microsoft/ML-For-Beginners/network/)
 [![GitHub stars](https://img.shields.io/github/stars/kannanjayachandran/Wafers-Fault-Detection?style=social)](https://github.com/kannanjayachandran/Wafers-Fault-Detection/stargazers/)
 </div>
