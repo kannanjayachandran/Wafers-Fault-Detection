@@ -1,3 +1,13 @@
+**The output of this whole project is:**
+
+  `1. Learned some basic ML algorithms.`
+  
+  `2. How to design an end-end software product.`
+  
+  `3. Applying CI/CD to ML models or tasks.`
+  
+  `4. Debugging and retraining ML models and how much important it is.`
+
 # UPDATE : WAFER PROJECT 2.0 
 
 ## Work in progress
