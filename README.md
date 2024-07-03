@@ -45,7 +45,7 @@
 
 >Inside each folder, there is a readme file which contains the documentation of the folder. It would contain information like what is the purpose of the folder, what are the files inside the folder, what are the functions present in the files, etc.
 
-**[Main ToDo](./Readme_Assets/ToDo.md)**
+> **This is not the working copy of the project as I am rebuilding it see this [Main ToDo](./Readme_Assets/ToDo.md)**
 
 **[Contributions](./CONTRIBUTING.md)**
 
