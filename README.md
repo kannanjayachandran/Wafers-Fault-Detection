@@ -45,7 +45,7 @@
 
 >Inside each folder, there is a readme file which contains the documentation of the folder. It would contain information like what is the purpose of the folder, what are the files inside the folder, what are the functions present in the files, etc.
 
-> **This is not the working at the moment; I am rebuilding it see this Thank you**
+> **This is not the working at the moment; I am rebuilding it. Thank you**
 
 **[Contributions](./CONTRIBUTING.md)**
 
