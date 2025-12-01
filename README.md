@@ -1,5 +1,10 @@
 <div align="center">
 
+![Status: Archived](https://img.shields.io/badge/STATUS-ARCHIVED-red)
+![Do Not Use](https://img.shields.io/badge/PRODUCTION-DO_NOT_USE-critical)
+
+This project has been archived as it has numerous flaws; read the [critique report](./Critique_Report.md) for detailed analysis
+
 # Wafers-Fault-Detection
 
 An end-to-end machine learning project for detecting faults in wafer sensor
@@ -28,7 +33,7 @@ An end-to-end machine learning project for detecting faults in wafer sensor
 
 > The data is obtained as batches to a fixed location. The data contains the Wafer names and different sensor values for each wafer. The last column will have `-1 or 1` values. The `-1` values indicate that the wafer is not defective and the `1` values indicate that the wafer is defective. Apart from this data, the client would also provide the schema which contain information like **Name of the files, Length of Date value in FileName, Length of Time value in FileName, Number of Columns, Name of the Columns, and their datatype.**
 
-**The dataset is obtained from [zenodo](https://zenodo.org/record/4322353#.Y7K4y3ZBytU).**
+**The dataset is obtained from [SECOM](https://archive.ics.uci.edu/dataset/179/secom).**
 
 ### 3. Solution
 
@@ -43,8 +48,6 @@ An end-to-end machine learning project for detecting faults in wafer sensor
 **Detailed explanation of the complete project is given in the [Project Structure](./Readme_Assets/Structure.md) It contains the documentation of the project.**
 
 > Inside each folder, there is a readme file which contains the documentation of the folder. It would contain information like what is the purpose of the folder, what are the files inside the folder, what are the functions present in the files, etc.
-
-> **This is not the working at the moment; I am rebuilding it. Thank you**
 
 **[Contributions](./CONTRIBUTING.md)**
 
